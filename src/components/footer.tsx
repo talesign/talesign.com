@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="p-6">
       <hr />
-      <div className="flex gap-4">
+      <div className="flex gap-4 flex-wrap">
         <a href="/">Home</a>
         <a href="/projects">Projects</a>
         <a href="/about">About</a>
