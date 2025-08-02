@@ -78,18 +78,18 @@ _110/110 cum laude_
 
 ## Skills
 
-#### Languages
+### Languages
 
 Zig, Typescript, Javascript, SQL, Golang, C#, HTML, CSS
 
-#### Frameworks & Libraries
+### Frameworks & Libraries
 
 Astro, TanStack, NextJs, React, Raylib, Unity, Godot, Tailwind
 
-#### Databases
+### Databases
 
 PostgresSQL, SQLite
 
-#### Cloud/DevOps
+### Cloud/DevOps
 
 AWS, Google Cloud Platform, Docker, Github Actions
