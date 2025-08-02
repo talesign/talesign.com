@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/default.astro";
+import { getCollection } from "astro:content";
+const projects = await getCollection("projects");
+const featuredProjects = projects.filter((item) => item.data.featured === true);
+const workProjects = projects.filter((item) => item.data.type === "work" && item.data.featured === false);
+const personalProjects = projects.filter((item) => item.data.type === "personal" && item.data.featured === false);
+---
+<Layout
+  title="My Projects - Oliviero Taleghani"
+  description="A collection of my work, from professional client applications to personal passion projects. Explore web apps built with Go & TypeScript, games made in C#, and more."
+>
+    <h1>Projects</h1>
+    <hr>
+    <h2>Featured Projects</h2>
+      <div class="">
+        {featuredProjects.map((item) => (
+          <article class="rounded-2xl bg-ctp-latte-mantle dark:bg-ctp-mocha-mantle p-4 my-4">
+              {item.data.link ? <h3> <a href={item.data.link} target="_blank" class="flex gap-2 items-center">{item.data.title}</a></h3> : <h3>{item.data.title}</h3>}
+              <div set:html={item.data.description}></div>
+          </article>
+        ))}
+      </div>
+    <hr>
+    <h2>Work projects</h2>
+      <div class="">
+        {workProjects.map((item) => (
+          <article class="rounded-2xl bg-ctp-latte-mantle dark:bg-ctp-mocha-mantle p-4 my-4">
+              {item.data.link ? <h3> <a href={item.data.link} target="_blank" class="flex gap-2 items-center">{item.data.title}</a></h3> : <h3>{item.data.title}</h3>}
+              <div set:html={item.data.description}></div>
+          </article>
+        ))}
+      </div>
+    <hr>
+    <h2>Personal projects</h2>
+      <div class="">
+        {personalProjects.map((item) => (
+          <article class="rounded-2xl bg-ctp-latte-mantle dark:bg-ctp-mocha-mantle p-4 my-4">
+              {item.data.link ? <h3> <a href={item.data.link} target="_blank" class="flex gap-2 items-center">{item.data.title}</a></h3> : <h3>{item.data.title}</h3>}
+              <div set:html={item.data.description}></div>
+          </article>
+        ))}
+      </div>
+</Layout>

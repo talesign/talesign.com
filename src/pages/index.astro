@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/default.astro"
+import { getCollection } from "astro:content";
+const projects = await getCollection("projects");
+const filteredProjects = projects.filter((item) => item.data.featured === true).slice(-2);
+const blog = await getCollection("blog");
+const filteredBlog = blog.slice(-2);
+---
+<Layout 
+  title="Oliviero Taleghani | Full-Stack Developer" 
+  description="Hi, I'm Oliviero Taleghani, a software developer from Italy who enjoys building useful things for the web with Go and TypeScript. Here are some of my projects."
+>
+  <h1>Hi, I'm Oliver.</h1>
+  <hr>
+  <p>I'm a developer who is passionate about building high-quality software. I believe the best digital products are the ones you can depend on—they're fast, robust, and straightforward to manage behind the scenes. That's why I'm committed to writing simple, maintainable, and performant code in everything I build. Below, you'll find some projects where I put these ideas into practice.</p>
+  <ul>
+    {filteredProjects.map((item: any) => (
+      <li><a href={item.data.link} class="flex gap-2 items-baseline" target="_blank">{item.data.title}</a></li>
+    ))}
+    <li><a href="/projects" class="flex gap-2 items-baseline">View more projects</a></li>
+  </ul>
+  <hr>
+  <p>Today, I work as a full-stack developer with a focus on <span class="tech"><i class="devicon-typescript-plain"></i> TypeScript</span> and <span class="tech"><i class="devicon-go-plain"></i> Go</span>. While I enjoy building high-quality applications, I am channeling that passion for quality and resilience into a new focus: cybersecurity. I am actively preparing for a career as a penetration tester, where I can use my developer's perspective to find and fix vulnerabilities before they can be exploited.</p>
+  <hr>
+  Sometimes I write about software, security, and what I'm learning in general.
+  <ul>
+    {filteredBlog.map((item: any) => (
+      <li><span class="font-mono">{item.data.published} - </span><a href={`/blog/${item.id}`}>{item.data.title}</a></li>
+    ))}
+    <li><a href="/blog" class="flex gap-2 items-baseline">View more articles</a></li>
+  </ul>
+
+</Layout>

@@ -1,0 +1,54 @@
+---
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
+import "../styles/global.css";
+import { ClientRouter } from "astro:transitions";
+import '@fontsource/iosevka-curly';
+import '@fontsource-variable/geist';
+
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+    <meta name="theme-color" content="#eff1f5" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1e1e2e" media="(prefers-color-scheme: dark)">
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+    <title>{title || "Astro"}</title>
+    <meta name="description" content={description || "otaleghani"} />
+    <script is:inline>
+      (function() {
+        const theme = (() => {
+          const storedTheme = localStorage.getItem('theme');
+          if (storedTheme === 'mocha' || storedTheme === 'latte') {
+            return storedTheme;
+          }
+          if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            return 'mocha';
+          }
+          return 'latte';
+        })();
+
+        if (theme === 'mocha') {
+          document.documentElement.classList.add('mocha');
+        } else {
+          document.documentElement.classList.remove('mocha');
+        }
+      })();
+    </script>
+    <ClientRouter />
+	</head>
+	<body class="mx-auto max-w-prose">
+    <Navbar client:load />
+    <main>
+      <slot />
+    </main>
+    <Footer client:load />
+	</body>
+</html>

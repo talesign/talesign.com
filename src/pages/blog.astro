@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/default.astro"
+import { getCollection } from "astro:content";
+const blog = await getCollection("blog");
+---
+<Layout
+  title="My Blog - Oliviero Taleghani"
+  description="A place for my thoughts on software development, security, and other things I'm learning. Read my latest posts on Go, system-level programming, and more."
+  >
+  <h1>Blog</h1>
+  <hr>
+  {blog.map((item: any) => (
+    <article>
+      <span class="font-mono">{item.data.published} - </span><a href={`/blog/${item.id}`}>{item.data.title}</a>
+    </article>
+  ))}
+</Layout>
