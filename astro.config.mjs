@@ -10,7 +10,7 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://talesign.com/",
+  site: "https://www.talesign.com/",
   integrations: [react(), sitemap(), mdx()],
   vite: {
     plugins: [tailwindcss()],
@@ -22,7 +22,7 @@ export default defineConfig({
         dark: "catppuccin-mocha",
       },
       wrap: false,
-      defaultColor: 'light-dark()',
+      defaultColor: "light-dark()",
     },
   },
   redirects: {
@@ -38,5 +38,5 @@ export default defineConfig({
     "/work/liber-consulting": "/",
     "/work/tia-maria": "/",
     "/work/truth-belief-justification": "/",
-  }
+  },
 });
