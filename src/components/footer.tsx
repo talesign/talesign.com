@@ -10,10 +10,10 @@ export default function Footer() {
         <a href="/about">About</a>
         <a href="/resume">Resume</a>
         <a href="/contact">Contact</a>
-        <a href="/" target="_blank">
+        <a href="https://github.com/otaleghani" target="_blank">
           Github
         </a>
-        <a href="/" target="_blank">
+        <a href="https://www.linkedin.com/in/otaleghani/" target="_blank">
           Linkedin
         </a>
         <a href="/privacy-policy">Privacy Policy</a>
