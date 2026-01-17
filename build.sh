@@ -3,7 +3,7 @@
 INPUT_DIR="./talesign.com/"
 SITE_NAME="otaleghani"
 DEPLOYMENT_URL="https://www.talesign.com"
-THEME=""
+THEME="catppuccin"
 
 # Exit immediately if any command fails
 set -e
