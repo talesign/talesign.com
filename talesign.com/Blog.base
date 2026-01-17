@@ -1,0 +1,17 @@
+filters:
+  and:
+    - file.inFolder("Blog")
+properties:
+  file.name:
+    displayName: Title
+  note.description:
+    displayName: Summary
+views:
+  - type: table
+    name: Table
+    groupBy:
+      property: file.folder
+      direction: ASC
+    order:
+      - file.name
+      - description

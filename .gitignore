@@ -1,0 +1,7 @@
+.direnv/
+result*
+.DS_Store
+/public
+.obsidian/
+.trash/
+result/
