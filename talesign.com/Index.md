@@ -7,6 +7,7 @@ description: Hi, I'm Oliviero Taleghani, a software developer from Italy who enj
 I'm a developer who is passionate about building high-quality software. I believe the best digital products are the ones you can depend on—they're fast, robust, and straightforward to manage behind the scenes. That's why I'm committed to writing simple, maintainable, and performant code in everything I build. Below, you'll find some projects where I put these ideas into practice.
 
 - [[Kiln]], Obsidian static website generator written in Go.
+- [[Prism]], A fully configured, stable-by-design, opinionated Linux distro. 
 - [[Flux]], form manager for static sites.
 - [[Zigboy]], Gameboy (DMG) emulator in Zig.
 - [[Specter the Reaper]], my first attempt at game design in Unity.
