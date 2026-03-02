@@ -1,7 +1,7 @@
 ---
 title: Nixploit
 description: A reproducible penetration testing environment made with Nix, ready to launch with a single command.
-type: Personal
+type: Open source
 ---
 # Nixploit
 

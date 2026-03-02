@@ -1,6 +1,6 @@
 ---
 type: Work
-description: Some web development jobs that I did over the years. Most of these projects are made with Go or javascript frameworks such as Next.js
+description: Some web development jobs that I did over the years. Most of these projects are made with Go or Typescript frameworks such as Next.js
 title: Other works
 ---
 # Client work

@@ -1,7 +1,7 @@
 ---
 title: Flux
 description: A privacy-first form backend written in Go. Features a unique SSH-based TUI, AES-GCM encryption, and native HTMX integration. The secure alternative to SaaS forms.
-type: Personal
+type: Open source
 ---
 # Flux
 

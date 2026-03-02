@@ -1,7 +1,7 @@
 ---
 title: Prism
 description: An opinionated, state-first NixOS distribution that refracts your operating system into distinct, purpose-driven identities.
-type: Personal
+type: Open source
 ---
 # Prism
 

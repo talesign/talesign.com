@@ -1,5 +1,5 @@
 ---
-type: Personal
+type: Open source
 title: Zigboy
 description: An exploration into systems programming and hardware emulation by building a Gameboy (DMG) emulator in Zig.
 ---

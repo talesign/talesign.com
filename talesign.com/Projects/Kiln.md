@@ -1,7 +1,7 @@
 ---
 title: Kiln
 description: An Obsidian static website generator made in Go that takes your Obsidian vault and makes it a blazingly fast website.
-type: Personal
+type: Open source
 ---
 # Kiln
 

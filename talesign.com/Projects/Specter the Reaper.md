@@ -1,6 +1,6 @@
 ---
 title: Specter the Reaper
-type: Personal
+type: Open source
 description: A Cuphead-inspired boss fight featuring a custom 2D animation engine I engineered in C# in Unity for high-fidelity, hand-drawn effects.
 ---
 # Specter the Reaper
